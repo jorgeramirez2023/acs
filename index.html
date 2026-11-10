@@ -2,127 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>eBay · Customer Service Order Viewer</title>
+<title>eBay · Order Service Desk</title>
 <style>
-:root{font-family:Inter,Arial,Helvetica,sans-serif;color:#102044;background:#f7f9fc;--blue:#0846c4;--edge:#cbd5e4;--muted:#58647a;--soft:#eaf2ff}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}.shell{max-width:1580px;padding:22px 28px 50px;margin:auto}.search{background:#fff;border:1px solid var(--edge);box-shadow:0 2px 12px #12365f0a;border-radius:12px;padding:17px 20px;display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:20px}.search label{font-size:12px;font-weight:750;color:#43536d;display:block;margin-bottom:7px}.search .field{flex:1;min-width:220px}.search input{width:100%;padding:12px 13px;border:1px solid #bac8dc;border-radius:8px;color:#142344;outline-color:#0a52d4}.btn{border:1px solid #b9c8e0;background:#fff;border-radius:8px;padding:11px 16px;color:#0c2757;font-weight:700;cursor:pointer}.btn.primary{background:#064acc;color:#fff;border-color:#064acc}.btn:disabled{opacity:.55;cursor:wait}.err{color:#ac2235;font-size:13px;min-height:18px;margin-top:6px}.header{display:flex;justify-content:space-between;align-items:start;gap:12px;margin:16px 4px 18px;flex-wrap:wrap}.brand{font-size:30px;font-weight:800;letter-spacing:-2px;line-height:1}.brand span:nth-child(1){color:#e53238}.brand span:nth-child(2){color:#0064d2}.brand span:nth-child(3){color:#f5af02}.brand span:nth-child(4){color:#86b817}.crumb{font-size:13px;letter-spacing:0;margin-left:13px;border-left:1px solid #b8c6da;padding-left:13px;vertical-align:middle;font-weight:600}.main-title{font-size:26px;font-weight:820;line-height:1.2;margin:4px 0}.small{color:var(--muted);font-size:12px}.header-right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.pill{padding:6px 12px;border-radius:100px;font-size:12px;font-weight:800;background:#e8edf4;color:#334155}.pill.ok{background:#dcf7e5;color:#166534}.pill.warn{background:#e1edff;color:#0644bf}.pill.bad{background:#ffe5e8;color:#ac2534}h2{font-size:14px;color:#0c2b60;margin:18px 3px 7px;letter-spacing:.2px}.grid{display:grid;gap:14px}.overview{grid-template-columns:1.2fr 1fr 1fr}.mid{grid-template-columns:1.2fr 2fr}.ship{grid-template-columns:1.2fr .94fr 1.55fr}.bottom{grid-template-columns:1.7fr 1fr}.card{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:14px 17px;min-width:0;box-shadow:0 1px 2px #142e4b08}.card h3{margin:0 0 12px;font-size:15px;display:flex;align-items:center;gap:9px}.card h3 .symbol{color:#0646c4;font-size:18px}.item{display:flex;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid #dce3ed}.item:last-child{border-bottom:0}.item strong{font-size:13px;color:#101827}.item .money{font-weight:800;text-align:right;white-space:nowrap}.line{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px solid #e0e6ef;font-size:13px;align-items:start}.line:last-child{border-bottom:0}.line>span:first-child{color:#34435a}.line strong{color:#132239;text-align:right;overflow-wrap:anywhere}.line.total{background:#e8f3fc;border-radius:6px;padding:9px 12px;margin:9px -7px 0;font-size:16px}.line.total strong{font-size:18px}.cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.label{color:#607087;font-size:12px;margin-bottom:3px}.value{font-size:13px;font-weight:750;overflow-wrap:anywhere}.kv{padding:3px 0}.muted{color:#718096}.empty{color:#748196;font-style:italic;font-size:13px;padding:7px 0}.extras{border-top:1px dashed #ccd5e1;margin-top:13px;padding-top:10px}.extras summary{font-size:12px;color:#0a49b6;font-weight:700;cursor:pointer;margin-bottom:8px}.extra-row{display:flex;gap:10px;justify-content:space-between;align-items:start;padding:5px 0;border-bottom:1px solid #eef1f6;font-size:12px}.extra-row>span{color:#5a6679}.extra-row strong{text-align:right;overflow-wrap:anywhere}.nested{border-left:2px solid #dbe7f7;margin:7px 0 9px 10px;padding-left:11px}.nested-title{font-size:12px;font-weight:800;color:#274a78;margin:6px 0}.tag{background:#eff3f8;border-radius:5px;padding:3px 7px;font-size:11px;font-weight:750}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ship-entry{padding:10px 0;border-top:1px solid #e6edf4}.ship-entry:first-of-type{border:0}.notice{background:#eaf3ff;border:1px solid #d7e6fb;border-radius:8px;color:#294769;font-size:12px;padding:12px}.placeholder{text-align:center;padding:36px 15px;color:#66758a;background:white;border:1px dashed #bdcbe0;border-radius:10px}.hidden{display:none!important}a{color:#064ac5;text-decoration:none}a:hover{text-decoration:underline}.mini-title{font-size:12px;font-weight:800;color:#233959;margin:11px 0 5px}.status{font-size:12px}.skeleton{color:#64748b}.nowrap{white-space:nowrap}.global-extras{margin-top:15px}.flex-head{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}.timestamp{font-weight:500;color:#6b778a;font-size:11px}.payhold{font-size:12px;color:#835200;background:#fff5d9;border-radius:6px;padding:7px;margin-top:9px}.topinfo{color:#556781;font-size:13px;margin:0 0 14px}.copy{padding:2px 5px;font-size:11px;border:1px solid #cfd9e7;border-radius:5px;background:#fff;cursor:pointer}@media(max-width:1100px){.overview,.ship{grid-template-columns:1fr 1fr}.bottom{grid-template-columns:1fr}.overview>.card:last-child,.ship>.card:last-child{grid-column:1/-1}}@media(max-width:680px){.shell{padding:14px}.overview,.mid,.ship,.bottom,.cols2,.split{grid-template-columns:1fr}.overview>.card:last-child,.ship>.card:last-child{grid-column:auto}.header{margin-top:6px}.main-title{font-size:22px}}
+:root{font-family:Arial,Helvetica,sans-serif;color:#0d1933;background:#fff;--navy:#0a245b;--blue:#064bc9;--border:#b7c6dc;--muted:#485b74;--line:#d6dfeb}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:#064acd}.shell{max-width:1580px;padding:16px 34px 50px;margin:auto}.search{display:flex;align-items:end;gap:10px;background:#f0f5fc;border:1px solid #c6d5ea;border-radius:9px;padding:13px 16px;margin-bottom:14px;flex-wrap:wrap}.search-field{flex:1;min-width:240px}.search label{display:block;color:#1c3664;font-weight:700;font-size:12px;margin-bottom:5px}.search input{border:1px solid #a9bedb;border-radius:6px;background:white;width:100%;height:39px;padding:0 12px;outline-color:#0050d2}.btn{height:39px;border:1px solid #b4c5da;color:#0d2757;background:#fff;border-radius:7px;padding:0 15px;font-size:12px;font-weight:700;white-space:nowrap}.btn.primary{background:#034bd2;color:#fff;border-color:#034bd2}.btn:disabled{opacity:.5;cursor:default}.error{width:100%;font-size:13px;color:#b02133;min-height:0}.error:empty{display:none}.hidden{display:none!important}.intro{background:#f6f9fc;border:1px dashed #adc0d8;color:#556981;padding:32px;border-radius:9px;text-align:center}.masthead{display:flex;align-items:start;justify-content:space-between;gap:14px;margin:3px 8px 12px;flex-wrap:wrap}.brandline{display:flex;align-items:center;gap:14px;font-size:14px}.ebay{font-size:28px;line-height:1;font-weight:700;letter-spacing:-2px}.ebay span:nth-child(1){color:#e53238}.ebay span:nth-child(2){color:#0064d2}.ebay span:nth-child(3){color:#f5af02}.ebay span:nth-child(4){color:#86b817}.breadcrumb{border-left:1px solid #9baac0;padding-left:15px;color:#16264b;font-weight:600}.order-title{font-size:26px;font-weight:800;margin:2px 0}.meta{font-size:13px}.head-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.badge{display:inline-block;background:#e5e9ee;color:#344051;border-radius:100px;font-weight:800;font-size:12px;padding:6px 11px}.badge.green{background:#d9f5e0;color:#116524}.badge.blue{background:#d8e6ff;color:#0739bc}.badge.yellow{background:#fff0c2;color:#704500}.section-title{font-size:14px;color:var(--navy);font-weight:850;margin:12px 6px 6px}.grid{display:grid;gap:14px}.overview{grid-template-columns:1.22fr 1fr 1fr}.middle{grid-template-columns:1.16fr 1.94fr;margin-top:11px}.logistics{grid-template-columns:1.14fr .9fr 1.42fr}.communication{grid-template-columns:1.72fr 1fr;margin-top:15px}.card{border:1px solid var(--border);border-radius:9px;padding:10px 14px 13px;background:#fff;min-width:0;overflow:hidden}.card h3{font-size:15px;display:flex;align-items:center;gap:9px;margin:0 0 9px;color:#0e1d3c}.symbol{color:#063fb5;font-size:18px;min-width:18px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:6px 4px;font-size:13px}.row:last-child{border:0}.row span:first-child{color:#13233f}.row strong{text-align:right;overflow-wrap:anywhere}.total{background:#e7f3ff;border-radius:6px;border:0;margin-top:5px;padding:8px 10px;font-size:17px;font-weight:800}.total strong{font-size:19px}.item{display:flex;align-items:start;gap:12px;border-bottom:1px solid var(--line);padding:7px 0}.item:last-child{border:0}.item-image{width:72px;height:68px;background:#f2f4f7;border-radius:7px;display:grid;place-items:center;flex:none;color:#8b9cb1;font-size:27px}.item-body{min-width:0;flex:1;font-size:13px}.item-name{font-weight:800;color:#111}.item-price{text-align:right;white-space:nowrap;font-size:14px;font-weight:800}.subtle{font-size:12px;color:#2c3b55;margin-top:3px;line-height:1.45}.smaller{font-size:11px;font-weight:400}.columns{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin:5px 0 10px;font-size:13px}.field .label{font-size:12px;color:#23334f}.field .value{font-weight:750;margin-top:1px;overflow-wrap:anywhere}.status-line{display:flex;align-items:center;gap:9px}.status-line span:last-child{font-weight:700}.status-pill{background:#e5e9ee;border-radius:5px;padding:3px 8px;font-size:12px;font-weight:800}.status-pill.green{background:#d4f6da;color:#155626}.notes-status{font-size:12px;color:#62738b}.internal{display:grid;grid-template-columns:1fr 1fr;gap:24px}.internal .field+.field{border-left:1px solid var(--border);padding-left:18px}.internal select,.internal textarea{width:100%;padding:9px;border:1px solid #c0ccdc;border-radius:6px;background:#fff;font-size:13px}.internal select:disabled,.internal textarea:disabled{background:#f8fafc;color:#728095}.empty{font-size:12px;color:#697b92;padding:8px 0}.ship-inner{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ship-inner>div:nth-child(2){border-left:1px solid var(--border);padding-left:15px}.address{font-size:13px;line-height:1.6;white-space:pre-line}.mini-head{font-weight:750;font-size:13px;margin:9px 0 5px}.shipment{border-top:1px solid var(--line);padding-top:7px;margin-top:8px}.shipment a{font-size:12px}.data-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}.data-table th{background:#e9edf4;text-align:left;font-size:11px;padding:9px 8px}.data-table td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}.data-table td:last-child{overflow-wrap:anywhere}.notice{border-radius:7px;padding:10px;background:#eaf3fe;color:#29466e;font-size:12px}.details{margin-top:9px;border-top:1px dashed #cbd7e5;padding-top:7px}.details summary{color:#0750bf;font-size:12px;font-weight:700;cursor:pointer}.extra{display:flex;align-items:start;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid #e9edf5;font-size:12px}.extra span:first-child{color:#4b5e77}.extra strong{overflow-wrap:anywhere;text-align:right}.nest{margin:8px 0 8px 10px;border-left:2px solid #d9e6f7;padding-left:11px}.nest-title{font-weight:800;font-size:12px;color:#234676;margin:6px 0}.message-empty{min-height:190px;display:grid;place-items:center;color:#73829a;font-size:13px;text-align:center}.card-title-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.card-title-row h3{margin:0}.info-small{font-size:11px;color:#617188;margin-top:5px}.note-table .empty{padding:15px 8px}.callout{color:#566981;font-size:11px;margin-top:5px}.icon-button{border:1px solid #b5c6dd;background:#fff;border-radius:6px;font-size:12px;padding:6px 10px;color:#153566}.meta-info{font-size:11px;color:#596c86}.tagline{font-size:11px;color:#57708f}@media(max-width:1100px){.overview,.logistics{grid-template-columns:1fr 1fr}.overview .card:last-child,.logistics .card:last-child{grid-column:1/-1}.communication{grid-template-columns:1fr}}@media(max-width:700px){.shell{padding:12px}.overview,.middle,.logistics,.communication,.internal,.columns,.ship-inner{grid-template-columns:1fr}.overview .card:last-child,.logistics .card:last-child{grid-column:auto}.ship-inner>div:nth-child(2),.internal .field+.field{border-left:0;padding-left:0}.order-title{font-size:21px}.search .btn{flex:1}.card{padding:11px}.head-actions{gap:6px}}
 </style>
 </head>
 <body><main class="shell">
 <form class="search" id="searchForm">
-  <div class="field"><label for="orderInput">EBAY ORDER NUMBER</label><input id="orderInput" autocomplete="off" placeholder="e.g. 21-15381-49695" required></div>
-  <button class="btn primary" id="searchBtn" type="submit">🔎 Search order</button><button class="btn" type="button" id="refreshBtn" disabled>↻ Refresh from eBay</button>
-  <div class="err" id="error" role="alert" style="flex-basis:100%"></div>
+ <div class="search-field"><label for="orderInput">EBAY ORDER NUMBER</label><input id="orderInput" placeholder="Paste eBay order number, e.g. 21-15381-49695" autocomplete="off" required></div>
+ <button class="btn primary" id="searchBtn" type="submit">Search Order</button><button class="btn" id="refreshBtn" type="button" disabled>↻ Refresh from eBay</button>
+ <div id="error" class="error" role="alert"></div>
 </form>
-<div id="welcome" class="placeholder">Enter an eBay order number above and click <b>Search order</b>.</div>
+<div id="welcome" class="intro">Enter an order number above, then click <strong>Search Order</strong>.</div>
 <div id="workspace" class="hidden">
-  <div class="header"><div><div class="brand"><span>e</span><span>b</span><span>a</span><span>y</span><span class="crumb">Orders / eBay</span></div><div class="main-title" id="orderTitle"></div><div class="small" id="orderSubtitle"></div></div><div class="header-right" id="headerBadges"></div></div>
-  <h2>ORDER OVERVIEW</h2><section class="grid overview">
-    <div class="card" id="itemsCard"><h3><span class="symbol">☷</span> Items ordered</h3><div id="items"></div></div>
-    <div class="card"><h3><span class="symbol">▣</span> Order summary</h3><div id="summary"></div></div>
-    <div class="card"><h3><span class="symbol">◎</span> Order status (eBay)</h3><div id="orderStatus"></div></div>
-  </section>
-  <section class="grid mid" style="margin-top:13px">
-    <div class="card"><h3><span class="symbol">▣</span> Buyer information</h3><div id="buyer"></div></div>
-    <div class="card"><h3><span class="symbol">▤</span> Internal status &amp; comment</h3><div class="notice">Not provided by this eBay API. Internal status and comments can be connected separately to Zoho Creator.</div></div>
-  </section>
-  <h2>SHIPPING &amp; PAYMENT</h2><section class="grid ship">
-    <div class="card"><h3><span class="symbol">♧</span> Shipping details</h3><div id="shipping"></div></div>
-    <div class="card"><h3><span class="symbol">▣</span> Payment &amp; refunds</h3><div id="payment"></div></div>
-    <div class="card"><h3><span class="symbol">⇄</span> Returns</h3><div id="returns" class="empty">Return details are not included in this API response.</div></div>
-  </section>
-  <section class="grid bottom" style="margin-top:14px">
-    <div class="card"><h3><span class="symbol">✉</span> eBay Messaging</h3><div id="messages" class="empty">Messages are not included in this API response.</div></div>
-    <div class="card"><h3><span class="symbol">▤</span> Internal notes</h3><div class="empty">Internal notes are not included in this API response.</div></div>
-  </section>
-  <section class="card global-extras hidden" id="otherCard"><h3>Other information returned by the API</h3><div id="other"></div></section>
+ <header class="masthead"><div><div class="brandline"><div class="ebay"><span>e</span><span>b</span><span>a</span><span>y</span></div><div class="breadcrumb">Orders / eBay</div></div><div class="order-title" id="orderTitle"></div><div class="meta" id="orderSubtitle"></div></div><div class="head-actions"><span id="paymentBadge" class="badge"></span><span id="fulfillmentBadge" class="badge"></span></div></header>
+ <h2 class="section-title">ORDER OVERVIEW</h2>
+ <div class="grid overview">
+  <section class="card"><h3><span class="symbol">☷</span><span id="itemsTitle">Items ordered</span></h3><div id="items"></div></section>
+  <section class="card"><h3><span class="symbol">▣</span>Order summary</h3><div id="summary"></div></section>
+  <section class="card"><h3><span class="symbol">◎</span>Order status (eBay)</h3><div id="status"></div></section>
+ </div>
+ <div class="grid middle">
+  <section class="card"><h3><span class="symbol">▣</span>Buyer information</h3><div id="buyer"></div></section>
+  <section class="card"><h3><span class="symbol">▤</span>Internal status &amp; comment</h3><div class="internal"><div class="field"><div class="label">Internal status</div><select disabled><option>Not connected to Zoho Creator</option></select></div><div class="field"><div class="label">Comment</div><textarea disabled rows="2" placeholder="Available when connected to Zoho Creator"></textarea></div></div><div class="callout">Separate Zoho Creator data source; not part of this eBay order JSON.</div></section>
+ </div>
+ <h2 class="section-title">SHIPPING &amp; PAYMENT</h2>
+ <div class="grid logistics">
+  <section class="card"><h3><span class="symbol">♧</span>Shipping details</h3><div id="shipping"></div></section>
+  <section class="card"><h3><span class="symbol">▣</span>Payment &amp; refunds</h3><div id="payment"></div></section>
+  <section class="card"><div class="card-title-row"><h3><span class="symbol">⇄</span>Returns</h3><span id="returnBadge" class="tagline"></span></div><div id="returns"></div></section>
+ </div>
+ <div class="grid communication">
+  <section class="card"><div class="card-title-row"><h3><span class="symbol">✉</span>eBay Messaging</h3></div><div class="info-small">Buyer ↔ Seller communications via eBay</div><div id="messages"></div></section>
+  <section class="card"><div class="card-title-row"><h3><span class="symbol">▤</span>Internal notes (Customer communications)</h3></div><div class="info-small">Notes maintained separately in a Zoho Creator form — not eBay messages.</div><div id="notes"></div></section>
+ </div>
+ <section id="otherCard" class="card hidden" style="margin-top:14px"><h3>Additional API fields</h3><div id="other"></div></section>
 </div>
 </main>
 <script>
 'use strict';
-const ENDPOINT='/api/order'; // Vercel serverless endpoint on the same domain
-// Zoho public key is stored in Vercel environment variables, not in this page.
+const API='/api/order';
 const $=id=>document.getElementById(id);
-const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const human=s=>String(s).replace(/([a-z])([A-Z])/g,'$1 $2').replace(/_/g,' ').replace(/\b\w/g,x=>x.toUpperCase());
-const val=x=>x==null||x===''?'—':typeof x==='boolean'?(x?'Yes':'No'):String(x);
-const money=(obj)=>obj&&obj.value!=null?new Intl.NumberFormat('en-US',{style:'currency',currency:obj.currency||'USD'}).format(Number(obj.value)): '—';
-const date=(v,withTime=true)=>{if(!v)return '—';let d=new Date(v);return Number.isNaN(d.valueOf())?String(v):d.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric',...(withTime?{hour:'numeric',minute:'2-digit'}:{})});};
-const row=(label,value)=>`<div class="line"><span>${e(label)}</span><strong>${e(val(value))}</strong></div>`;
-const kv=(label,value)=>`<div class="kv"><div class="label">${e(label)}</div><div class="value">${e(val(value))}</div></div>`;
-// Render any unrecognized fields recursively, including additional FedEx data or nested arrays.
+const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const label=k=>String(k).replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+const v=x=>x===null||x===undefined||x===''?'—':typeof x==='boolean'?(x?'Yes':'No'):String(x);
+const currency=obj=>obj?.value!=null?new Intl.NumberFormat('en-US',{style:'currency',currency:obj.currency||'USD'}).format(Number(obj.value)):'—';
+const date=(iso,time=true)=>{if(!iso)return '—';const d=new Date(iso);return Number.isNaN(d.getTime())?v(iso):d.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'America/New_York',...(time?{hour:'numeric',minute:'2-digit'}:{})});};
+const line=(k,x)=>`<div class="row"><span>${escapeHtml(k)}</span><strong>${escapeHtml(v(x))}</strong></div>`;
+const field=(k,x)=>`<div class="field"><div class="label">${escapeHtml(k)}</div><div class="value">${escapeHtml(v(x))}</div></div>`;
+// Generic recursive component for ANY unforeseen JSON keys, including nested objects and arrays.
 function generic(value,depth=0){
-  if(depth>9)return '<span class="muted">Deeply nested data</span>';
-  if(value==null)return '<span class="muted">—</span>';
-  if(Array.isArray(value))return value.length?value.map((v,i)=>`<div class="nested"><div class="nested-title">Entry ${i+1}</div>${generic(v,depth+1)}</div>`).join(''):'<span class="muted">None</span>';
-  if(typeof value==='object')return Object.entries(value).map(([k,v])=> typeof v==='object'&&v!==null?`<div class="nested-title">${e(human(k))}</div><div class="nested">${generic(v,depth+1)}</div>`:`<div class="extra-row"><span>${e(human(k))}</span><strong>${e(val(v))}</strong></div>`).join('');
-  return e(val(value));
+ if(depth>15)return '<i>Maximum nesting depth reached</i>';
+ if(value==null)return '<span class="empty">—</span>';
+ if(Array.isArray(value))return value.length?value.map((child,i)=>`<div class="nest"><div class="nest-title">Record ${i+1}</div>${generic(child,depth+1)}</div>`).join(''):'<div class="empty">No records</div>';
+ if(typeof value==='object')return Object.entries(value).map(([key,child])=>child!==null&&typeof child==='object'?`<div class="nest-title">${escapeHtml(label(key))}</div><div class="nest">${generic(child,depth+1)}</div>`:`<div class="extra"><span>${escapeHtml(label(key))}</span><strong>${escapeHtml(v(child))}</strong></div>`).join('');
+ return escapeHtml(v(value));
 }
-function extras(obj,known,label='Additional details'){
-  if(!obj || typeof obj!=='object')return '';
-  const rest=Object.fromEntries(Object.entries(obj).filter(([k])=>!known.includes(k)));
-  return Object.keys(rest).length?`<details class="extras"><summary>${e(label)} (${Object.keys(rest).length})</summary>${generic(rest)}</details>`:'';
+function additional(obj,used,heading='Additional details'){
+ if(!obj||typeof obj!=='object'||Array.isArray(obj))return '';
+ const unknown=Object.fromEntries(Object.entries(obj).filter(([k])=>!used.includes(k)));
+ return Object.keys(unknown).length?`<details class="details"><summary>${escapeHtml(heading)} (${Object.keys(unknown).length})</summary>${generic(unknown)}</details>`:'';
 }
-function extract(raw){
-  // Supports plain Deluge map or Creator's typical {code, result: ...} wrappers.
-  let d=raw;
-  for(let i=0;i<5;i++){
-    if(typeof d==='string'){try{d=JSON.parse(d);continue}catch{break}}
-    if(d && typeof d==='object' && !d.order && !d.orders && !d.shipping_fulfillments){
-      const next=d.result??d.data??d.response;
-      if(next!=null){d=next;continue}
-    }
-    break;
-  }
-  return d;
+function unwrap(payload){
+ let x=payload;
+ for(let i=0;i<5;i++){
+  if(typeof x==='string'){try{x=JSON.parse(x);continue}catch{break}}
+  if(x&&typeof x==='object'&&!x.order&&!x.orders&&!x.shipping_fulfillments){if(x.result!==undefined){x=x.result;continue}if(x.data!==undefined){x=x.data;continue}}
+  break;
+ }
+ return x;
 }
 function render(data,requested){
-  const orders=data.order||{};
-  const found=Array.isArray(data.orders)?data.orders.find(o=>o.orderId===requested):orders[requested]||Object.values(orders).find(v=>v&&v.orderId===requested);
-  if(!found){const desc=data.errors?JSON.stringify(data.errors):'';throw new Error('Order not found in the API response.'+(desc?' '+desc.slice(0,600):''));}
-  const o=found,oid=o.orderId||requested,b=o.buyer||{},addr=b.buyerRegistrationAddress||{},items=o.lineItems||[],sum=o.pricingSummary||{},pay=o.paymentSummary||{},inst=(o.fulfillmentStartInstructions||[])[0]||{},step=inst.shippingStep||{},ship=step.shipTo||{},shipaddr=ship.contactAddress||{};
-  const tracking=(data.shipping_fulfillments||{})[oid]||[];
-  $('orderTitle').textContent='Order '+oid;
-  $('orderSubtitle').textContent=`${date(o.creationDate)} · ${o.listingMarketplaceId||items[0]?.listingMarketplaceId||'eBay'}`;
-  $('headerBadges').innerHTML=`<span class="pill ${o.orderPaymentStatus==='PAID'?'ok':'warn'}">${e(human(o.orderPaymentStatus||'Unknown payment'))}</span><span class="pill ${o.orderFulfillmentStatus==='FULFILLED'?'ok':'warn'}">${e(human(o.orderFulfillmentStatus||'Unknown fulfillment'))}</span>`;
-  $('itemsCard').querySelector('h3').innerHTML=`<span class="symbol">☷</span> Items ordered (${items.length})`;
-  $('items').innerHTML=items.length?items.map(it=>`<div class="item"><div style="min-width:0"><strong>${e(it.title||'Untitled item')}</strong><div class="small" style="margin-top:6px">SKU: ${e(val(it.sku))}</div><div class="small">eBay item: ${e(val(it.legacyItemId))}</div>${extras(it,['title','sku','legacyItemId','quantity','lineItemCost','total'],'Other item fields')}</div><div class="money">${e(money(it.total||it.lineItemCost))}<div class="small" style="font-weight:500;margin-top:5px">Qty: ${e(val(it.quantity))}</div></div></div>`).join(''):'<div class="empty">No items returned</div>';
-  $('summary').innerHTML=[row('Subtotal',money(sum.priceSubtotal)),row('Shipping',money(sum.deliveryCost)),sum.tax?row('Tax',money(sum.tax)):'',`<div class="line total"><span>Total ${e(sum.total?.currency||'USD')}</span><strong>${e(money(sum.total))}</strong></div>`,extras(sum,['priceSubtotal','deliveryCost','tax','total'])].join('');
-  $('orderStatus').innerHTML=[row('Payment',human(o.orderPaymentStatus||'Unknown')),row('Fulfillment',human(o.orderFulfillmentStatus||'Unknown')),row('Cancellation',human(o.cancelStatus?.cancelState||'Unknown')),row('eBay Order ID',oid),row('Created',date(o.creationDate)),row('Last updated',date(o.lastModifiedDate)),row('Sales reference',o.salesRecordReference||'—'),extras(o.cancelStatus,['cancelState'],'Cancellation details')].join('');
-  $('buyer').innerHTML=`<div class="cols2"><div>${kv('Buyer username',b.username)}${kv('Email',addr.email||ship.email)}</div><div>${kv('Full name',addr.fullName||ship.fullName)}${kv('Phone',addr.primaryPhone?.phoneNumber||ship.primaryPhone?.phoneNumber)}</div></div>`+extras(b,['username','buyerRegistrationAddress','taxAddress'],'Other buyer details')+extras(addr,['fullName','email','primaryPhone','contactAddress'],'Other registration details')+extras(b.taxAddress,[],'Tax address');
-  const formattedAddr=[shipaddr.addressLine1,shipaddr.addressLine2,[shipaddr.city,shipaddr.stateOrProvince,shipaddr.postalCode].filter(Boolean).join(', '),shipaddr.countryCode].filter(Boolean).join('\n');
-  $('shipping').innerHTML=`<div class="split"><div>${kv('Ship to',ship.fullName)}<div style="white-space:pre-line;font-size:13px">${e(formattedAddr||'Not provided')}</div>${kv('Shipping email',ship.email)}</div><div>${kv('Selected shipping service',[step.shippingCarrierCode,step.shippingServiceCode].filter(Boolean).join(' · '))}${kv('Ship by',date(items[0]?.lineItemFulfillmentInstructions?.shipByDate))}${kv('Estimated delivery',date(inst.minEstimatedDeliveryDate,false)+' – '+date(inst.maxEstimatedDeliveryDate,false))}</div></div><div class="mini-title">Recorded shipment${tracking.length===1?'':'s'} (${tracking.length})</div>`+
-  (tracking.length?tracking.map((t,i)=>`<div class="ship-entry">${row('Carrier',t.shippingCarrierCode)}${row('Tracking number',t.shipmentTrackingNumber)}${row('Shipped',date(t.shippedDate))}${row('Fulfillment ID',t.fulfillmentId)}${extras(t,['shippingCarrierCode','shipmentTrackingNumber','shippedDate','fulfillmentId','lineItems'],'Additional shipment fields')}${t.lineItems?.length?extras({lineItems:t.lineItems},[],'Shipment line items'):''}</div>`).join(''):'<div class="empty">No shipment tracking returned</div>')+extras(step,['shipTo','shippingCarrierCode','shippingServiceCode'],'Other shipping instructions')+extras(ship,['fullName','email','primaryPhone','contactAddress'],'Other recipient details');
-  const payments=pay.payments||[],refunds=pay.refunds||[];
-  $('payment').innerHTML=[row('Payment status',human(o.orderPaymentStatus||'Unknown')),row('Payment method',payments.map(p=>human(p.paymentMethod)).join(', ')||'—'),row('Due seller',money(pay.totalDueSeller)),row('Refund records',refunds.length),row('Marketplace fee',money(o.totalMarketplaceFee)),payments.map((p,i)=>`<div class="mini-title">Payment ${i+1}</div>${row('Amount',money(p.amount))}${row('Status',human(p.paymentStatus||'Unknown'))}${row('Paid on',date(p.paymentDate))}${(p.paymentHolds||[]).length?`<div class="payhold">Payment hold: ${p.paymentHolds.map(h=>`${e(money(h.holdAmount))} · ${e(human(h.holdState||''))}`).join('; ')}</div>`:''}${extras(p,['amount','paymentMethod','paymentStatus','paymentDate','paymentHolds'],'Other payment details')}${p.paymentHolds?.length?extras({paymentHolds:p.paymentHolds},[],'Payment hold details'):''}`).join(''),refunds.length?`<div class="mini-title">Refunds</div>${generic(refunds)}`:'',extras(pay,['payments','refunds','totalDueSeller'],'Other payment summary')].join('');
-  // Render optional data if the backend adds it in a future version.
-  let r=(data.post_order_returns||{})[oid]??data.returns?.[oid];
-  $('returns').innerHTML=r?generic(r):'<div class="empty">Return details are not included in this API response.</div>';
-  let msg=(data.ebay_messages||data.messages||{})[oid];
-  $('messages').innerHTML=msg?generic(msg):'<div class="empty">Messages are not included in this API response.</div>';
-  const recognized=['orderIds','order','orders','shipping_fulfillments','success','errors','summary','derived','post_order_returns','returns','ebay_messages','messages'];
-  const other=Object.fromEntries(Object.entries(data).filter(([key])=>!recognized.includes(key)));
-  $('otherCard').classList.toggle('hidden',!Object.keys(other).length);
-  $('other').innerHTML=generic(other);
-  $('welcome').classList.add('hidden');$('workspace').classList.remove('hidden');
+ const orderMap=data.order||{};
+ const o=orderMap[requested]||Object.values(orderMap).find(x=>x?.orderId===requested)||data.orders?.find(x=>x?.orderId===requested);
+ if(!o)throw new Error('Order not found in the response. '+JSON.stringify(data.errors||{}).slice(0,200));
+ const id=o.orderId||requested,items=o.lineItems||[],buyer=o.buyer||{},reg=buyer.buyerRegistrationAddress||{},shippingInst=o.fulfillmentStartInstructions||[],inst=shippingInst[0]||{},step=inst.shippingStep||{},shipTo=step.shipTo||{},location=shipTo.contactAddress||{},pricing=o.pricingSummary||{},payment=o.paymentSummary||{},payments=payment.payments||[],refunds=payment.refunds||[],fulfillments=data.shipping_fulfillments?.[id]||[];
+ $('orderTitle').textContent='Order '+id;
+ $('orderSubtitle').textContent=date(o.creationDate)+' · '+(items[0]?.purchaseMarketplaceId||'eBay US');
+ $('paymentBadge').textContent=label(o.orderPaymentStatus||'Unknown');$('paymentBadge').className='badge '+(o.orderPaymentStatus==='PAID'?'green':'yellow');
+ $('fulfillmentBadge').textContent=label(o.orderFulfillmentStatus||'Unknown');$('fulfillmentBadge').className='badge '+(o.orderFulfillmentStatus==='FULFILLED'?'green':'blue');
+ $('itemsTitle').textContent=`Items ordered (${items.length})`;
+ $('items').innerHTML=items.length?items.map(item=>`<div class="item"><div class="item-image" aria-hidden="true">▣</div><div class="item-body"><div class="item-name">${escapeHtml(v(item.title))}</div><div class="subtle">SKU: ${escapeHtml(v(item.sku))}</div><div class="subtle">eBay Item: ${escapeHtml(v(item.legacyItemId))}</div>${additional(item,['title','sku','legacyItemId','quantity','total','lineItemCost'],'Other item fields')}</div><div class="item-price">${escapeHtml(currency(item.lineItemCost||item.total))}<div class="smaller">Qty: ${escapeHtml(v(item.quantity))}</div></div></div>`).join(''):'<div class="empty">No items available</div>';
+ $('summary').innerHTML=line('Subtotal',currency(pricing.priceSubtotal))+line('Shipping',currency(pricing.deliveryCost))+(pricing.tax?line('Tax',currency(pricing.tax)):'')+`<div class="row total"><span>Total ${escapeHtml(v(pricing.total?.currency||'USD'))}</span><strong>${escapeHtml(currency(pricing.total))}</strong></div>`+additional(pricing,['priceSubtotal','deliveryCost','tax','total']);
+ $('status').innerHTML=line('Payment',label(o.orderPaymentStatus||'Unknown'))+line('Fulfillment',label(o.orderFulfillmentStatus||'Unknown'))+line('Cancellation',label(o.cancelStatus?.cancelState||'Unknown'))+line('eBay Order ID',id)+line('Created',date(o.creationDate))+line('Last updated',date(o.lastModifiedDate))+additional(o.cancelStatus,['cancelState'],'Other cancellation fields');
+ $('buyer').innerHTML=`<div class="columns"><div>${field('Buyer username',buyer.username)}${field('Email',reg.email||shipTo.email)}</div><div>${field('Full name',reg.fullName||shipTo.fullName)}${field('Phone',reg.primaryPhone?.phoneNumber||shipTo.primaryPhone?.phoneNumber)}</div></div>`+additional(buyer,['username','buyerRegistrationAddress','taxAddress'],'Other buyer fields')+additional(reg,['fullName','email','primaryPhone','contactAddress'],'Other buyer registration fields')+additional(reg.contactAddress,[],'Registration address')+additional(buyer.taxAddress,[],'Tax address');
+ const street=[location.addressLine1,location.addressLine2,[location.city,location.stateOrProvince,location.postalCode].filter(Boolean).join(', '),location.countryCode].filter(Boolean).join('\n');
+ $('shipping').innerHTML=`<div class="ship-inner"><div>${field('Ship to',shipTo.fullName)}<div class="address">${escapeHtml(street||'Not provided')}</div></div><div>${field('Requested shipping service',[step.shippingCarrierCode,step.shippingServiceCode].filter(Boolean).join(' / '))}${field('Ship by',date(items[0]?.lineItemFulfillmentInstructions?.shipByDate))}${field('Estimated delivery',[date(inst.minEstimatedDeliveryDate,false),date(inst.maxEstimatedDeliveryDate,false)].join(' – '))}</div></div><div class="mini-head">Recorded shipments (${fulfillments.length})</div>`+(fulfillments.length?fulfillments.map((f,i)=>`<div class="shipment">${line('Carrier',f.shippingCarrierCode)}${line('Tracking number',f.shipmentTrackingNumber)}${line('Shipped',date(f.shippedDate))}${additional(f,['shippingCarrierCode','shipmentTrackingNumber','shippedDate','fulfillmentId','lineItems'],'Additional shipment fields')}${f.lineItems?.length?`<details class="details"><summary>Shipment line items</summary>${generic(f.lineItems)}</details>`:''}</div>`).join(''):'<div class="empty">No shipment tracking available</div>')+additional(inst,['fulfillmentInstructionsType','shippingStep','minEstimatedDeliveryDate','maxEstimatedDeliveryDate'],'Additional shipping instructions')+additional(step,['shippingCarrierCode','shippingServiceCode','shipTo'],'Additional shipping service fields')+additional(shipTo,['fullName','primaryPhone','contactAddress','email'],'Additional recipient fields');
+ $('payment').innerHTML=line('Payment method',payments.map(x=>x.paymentMethod).filter(Boolean).join(', ')||'—')+line('Payment status',label(o.orderPaymentStatus||'Unknown'))+line('Amount due seller',currency(payment.totalDueSeller))+line('Refunds',refunds.length)+line('Marketplace fee',currency(o.totalMarketplaceFee))+payments.map((p,i)=>`<div class="mini-head">Payment ${i+1}</div>${line('Amount',currency(p.amount))}${line('Status',label(p.paymentStatus||'Unknown'))}${line('Date',date(p.paymentDate))}${additional(p,['amount','paymentStatus','paymentMethod','paymentDate','paymentHolds'],'Additional payment fields')}${p.paymentHolds?.length?`<details class="details"><summary>Payment holds (${p.paymentHolds.length})</summary>${generic(p.paymentHolds)}</details>`:''}`).join('')+(refunds.length?`<div class="mini-head">Refund details</div>${generic(refunds)}`:'')+additional(payment,['payments','refunds','totalDueSeller'],'Additional payment summary fields');
+ const returns=data.post_order_returns?.[id]??data.returns?.[id];
+ $('returns').innerHTML=returns?generic(returns):'<div class="empty">No return data in this endpoint. Returns will appear when that source is connected.</div>';
+ const messageData=data.ebay_messages?.[id]??data.messages?.[id];
+ $('messages').innerHTML=messageData?generic(messageData):'<div class="message-empty">No messaging data included in the current eBay API response.</div>';
+ // Internal notes are a SEPARATE Zoho Creator form, not eBay messages.
+ // Do not fabricate records. If a future Creator API returns notes, render them here.
+ $('notes').innerHTML='<table class="data-table note-table"><thead><tr><th>Date & time</th><th>By</th><th>Note / Message</th></tr></thead><tbody><tr><td colspan="3" class="empty">Zoho Creator notes form not connected yet.</td></tr></tbody></table>';
+ const recognized=['orderIds','order','orders','shipping_fulfillments','success','errors','summary','derived','post_order_returns','returns','ebay_messages','messages'];
+ const rootExtra=Object.fromEntries(Object.entries(data).filter(([k])=>!recognized.includes(k)));
+ $('otherCard').classList.toggle('hidden',Object.keys(rootExtra).length===0);$('other').innerHTML=generic(rootExtra);
+ $('welcome').classList.add('hidden');$('workspace').classList.remove('hidden');
 }
-let lastOrder='';
-async function search(orderId){
-  const btn=$('searchBtn'),refresh=$('refreshBtn');$('error').textContent='';
-  btn.disabled=true;refresh.disabled=true;btn.textContent='Searching…';
-  try{
-    const url=new URL(ENDPOINT, window.location.href);url.searchParams.set('par_orderIds',orderId);
-    const response=await fetch(url.toString(),{method:'GET',headers:{'Accept':'application/json'}});
-    if(!response.ok)throw new Error(`API/proxy returned HTTP ${response.status}: ${(await response.text()).slice(0,400)}`);
-    const payload=await response.json();
-    if(payload.code != null && payload.code !== 3000)throw new Error('Zoho Creator error: '+JSON.stringify(payload).slice(0,400));
-    const data=extract(payload);
-    if(!data || typeof data!=='object')throw new Error('Unexpected API response format');
-    render(data,orderId);lastOrder=orderId;
-  }catch(err){$('error').textContent=err.message==='Failed to fetch'?'Unable to reach the Vercel API. Verify deployment and check /api/order?par_orderIds=YOUR_ORDER_NUMBER.':(err.message||String(err));}
-  finally{btn.disabled=false;refresh.disabled=!lastOrder;btn.textContent='🔎 Search order';}
+let active='';
+async function load(id){
+ $('error').textContent='';$('searchBtn').disabled=true;$('refreshBtn').disabled=true;$('searchBtn').textContent='Searching…';
+ try{
+  const url=new URL(API,location.href);url.searchParams.set('par_orderIds',id);
+  const response=await fetch(url,{headers:{Accept:'application/json'}});
+  if(!response.ok)throw new Error(`API returned HTTP ${response.status}: ${(await response.text()).slice(0,300)}`);
+  const payload=await response.json();if(payload.code!==undefined&&payload.code!==3000)throw new Error('Zoho Creator error: '+JSON.stringify(payload).slice(0,350));
+  const data=unwrap(payload);if(!data||typeof data!=='object')throw new Error('Invalid JSON response');
+  render(data,id);active=id;
+ }catch(err){$('error').textContent=err?.message||String(err);}
+ finally{$('searchBtn').disabled=false;$('refreshBtn').disabled=!active;$('searchBtn').textContent='Search Order';}
 }
-$('searchForm').addEventListener('submit',event=>{event.preventDefault();const id=$('orderInput').value.trim();if(id)search(id)});
-$('refreshBtn').addEventListener('click',()=>{if(lastOrder)search(lastOrder)});
-const fromQuery=new URLSearchParams(location.search).get('orderId');if(fromQuery){$('orderInput').value=fromQuery;search(fromQuery)}
-</script>
-</body></html>
+$('searchForm').addEventListener('submit',event=>{event.preventDefault();const id=$('orderInput').value.trim();if(id)load(id)});
+$('refreshBtn').addEventListener('click',()=>{if(active)load(active)});
+const initial=new URLSearchParams(location.search).get('orderId');if(initial){$('orderInput').value=initial;load(initial)}
+</script></body></html>

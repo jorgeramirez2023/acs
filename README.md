@@ -1,19 +1,20 @@
-# eBay Customer Service Order Viewer
+# eBay Order Agent (Vercel)
 
-Order search screen for customer-service agents. HTML/CSS/JavaScript frontend plus a Vercel serverless function that calls the Zoho Creator Custom API.
+Single-page service-agent dashboard inspired by the supplied screenshot.
 
 ## Deploy
-1. Create a GitHub repository and upload the *contents* of this folder, preserving `api/order.js`.
-2. In Vercel, import that repository. Framework Preset: **Other**. Root Directory: `./`.
-3. Add environment variable `ZOHO_CREATOR_PUBLIC_KEY` with your Zoho Creator Custom API public key (for Production).
-4. Deploy (or redeploy if you added the variable after the first deployment).
-5. Open the Vercel URL, enter order `21-15381-49695`, click **Search order**.
+1. Upload the contents of this folder to a GitHub repository.
+2. Import the repository in Vercel (Framework: Other).
+3. Set `ZOHO_CREATOR_PUBLIC_KEY` in Vercel Environment Variables.
+4. Deploy. Enter an eBay order number and click **Search Order**.
 
-## Routes
-- `/` - order viewer.
-- `/api/order?par_orderIds=21-15381-49695` - same-origin proxy that returns Zoho's original JSON (`{code:3000,result:{...}}`).
+The HTML calls `/api/order?par_orderIds=...`, and the serverless function calls the Zoho Creator Custom API. The browser does not directly call Zoho, so CORS is avoided.
 
-## Notes
-- No PHP required. Browser never calls Zoho directly, avoiding browser CORS blocks.
-- The frontend handles Zoho Creator's `result` wrapper and dynamically shows additional unknown fields.
-- This sample proxy exposes data to anyone who can reach the deployed site and knows an order ID. For real customer records, add authentication and access authorization before production. A Zoho `publickey` by itself is not suitable access control.
+## Dynamic fields
+Known fields appear in the designed cards. Unknown keys are shown automatically in collapsible "Additional ... fields" blocks, recursively including arrays and nested objects.
+
+## Internal notes
+**Not connected.** The **Internal notes** section is reserved for notes from a separate **Zoho Creator form**, not eBay. An additional endpoint and its response schema are needed to wire it up. Likewise, the internal status/comment fields and eBay messaging are not populated by the current order JSON. No records are invented.
+
+## Security
+The deployed `/api/order` endpoint currently has no user authentication. Add authentication and authorization before allowing production customer data access. The public key remains a server-side environment variable, but the order lookup itself is still publicly callable until protected.
