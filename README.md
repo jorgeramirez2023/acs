@@ -1,9 +1,13 @@
-# eBay Order Agent — Classic Layout
+# eBay Order Agent – simple login for Vercel
 
-Design based on the supplied customer-service HTML. The browser fetches `/api/order?par_orderIds=...`, which proxies to Zoho Creator.
+Upload these files to your existing GitHub repository, preserving folders. Vercel will redeploy automatically.
 
-Deploy on Vercel with framework **Other** and environment variable `ZOHO_CREATOR_PUBLIC_KEY`.
+- `index.html`: same customer-service dashboard plus username/password login.
+- `api/auth.js`: server-side login/logout/status; 8-hour signed HttpOnly cookie.
+- `api/order.js`: calls Zoho Creator, now requires a valid session.
+- `lib/auth.js`: session signature and verification.
+- `package.json`: ESM configuration.
 
-Unknown JSON fields are shown under expandable Additional fields within each relevant card. Internal notes require a separate Zoho Creator endpoint.
+**Demo credentials:** admin / admin. For real use, add `AUTH_USER` and `AUTH_PASSWORD` in Vercel → Settings → Environment Variables to override them, and add `AUTH_SESSION_SECRET` to a long random secret. Existing `ZOHO_CREATOR_PUBLIC_KEY` remains required. If `AUTH_SESSION_SECRET` is absent, sessions are signed with your existing `ZOHO_CREATOR_PUBLIC_KEY` as a fallback; defining a dedicated secret is strongly recommended.
 
-**Security:** Implement authentication and authorization before putting customer records in production.
+**Security:** admin/admin is a shared, guessable demo credential, not appropriate for real customer data. This is a simple login with no rate limiting, audit log, or per-user authorization. The HTML file itself is publicly accessible, but actual order data via `/api/order` is protected by the cookie.
