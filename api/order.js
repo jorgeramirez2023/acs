@@ -1,8 +1,10 @@
+import { authenticated } from '../lib/auth.js';
 // Vercel Node.js serverless function. Zoho Creator is queried server-side,
 // so the browser calls a same-origin /api/order endpoint without CORS issues.
 export default async function handler(req, res) {
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store');
+  if (!authenticated(req)) return res.status(401).json({ error: 'Login required' });
 
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
