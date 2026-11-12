@@ -212,4 +212,16 @@ el('logoutBtn').addEventListener('click',async()=>{
 fetch('/api/auth',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
  if(d?.authenticated)showApp();else showLogin();
 }).catch(showLogin);
-</script></body></html>
+</script>
+<script src="https://static.zohocdn.com/creator/widgets/version/2.0/widgetsdk-min.js"></script>
+
+<script>
+ZOHO.CREATOR.UTIL.getQueryParams()
+  .then(function(datos) {
+    alert("Parámetros recibidos:\n" + JSON.stringify(datos, null, 2));
+  })
+  .catch(function(error) {
+    alert("Error: " + String(error));
+  });
+</script>
+</body></html>
